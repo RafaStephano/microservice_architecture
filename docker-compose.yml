@@ -1,0 +1,30 @@
+version: '3'
+services:
+  service-discovery:
+    build: ./service-discovery
+    image: br.com.rstephano/service-discovery:latest
+    ports:
+      - "8761:8761"
+  awesome-phrases-1:
+    build: ./awesome-phrases
+    image: br.com.rstephano/awesome-phrases:latest
+    environment:
+      EUREKA_URI: http://service-discovery:8761/eureka
+    depends_on:
+      - service-discovery
+  awesome-phrases-2:
+    build: ./awesome-phrases
+    image: br.com.rstephano/awesome-phrases:latest
+    environment:
+      EUREKA_URI: http://service-discovery:8761/eureka
+    depends_on:
+      - service-discovery
+  api-gateway:
+    build: ./api-gateway
+    image: br.com.rstephano/api-gateway:latest
+    environment:
+      EUREKA_URI: http://service-discovery:8761/eureka
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service-discovery

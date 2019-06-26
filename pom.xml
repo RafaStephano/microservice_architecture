@@ -13,6 +13,7 @@
 		<module>api-gateway</module>
 		<module>service-discovery</module>
 		<module>config-server</module>
+		<module>awesome-phrases</module>
 	</modules>
 
 	<properties>

@@ -1,9 +1,9 @@
 server:
-  port: 8762
+  port: 8080
 
 spring:
   application:
-    name: zuul-server
+    name: api-gateway
 
 eureka:
   instance:
@@ -13,3 +13,10 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+zuul:
+  routes:
+    awesome-phrases:
+      serviceId: awesome-phrases
+  host:
+    socket-timeout-millis: 30000

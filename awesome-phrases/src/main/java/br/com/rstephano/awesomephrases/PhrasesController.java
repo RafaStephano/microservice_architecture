@@ -20,6 +20,7 @@ public class PhrasesController {
 
   @RequestMapping("/greeting")
   String greeting() {
+    System.out.println("Chamou aqui!");
     return String.format("Hello from '%s'!", eurekaClient.getApplication(appName).getName());
   }
 
