@@ -1,18 +1,7 @@
 server:
-  port: 8080
+  port: 8761
 
-#TODO: figure out why I need this here and in bootstrap.yml
-spring:
-  application:
-    name: testLatticeApp
-
-ribbon:
-  ServerListRefreshInterval: 1000
-
-endpoints:
-  health:
-    sensitive: false
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

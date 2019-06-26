@@ -5,11 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.rstephano</groupId>
-	<artifactId>api-gateway</artifactId>
+	<artifactId>awesome-phrases</artifactId>
 	<version>0.1.0</version>
 	<packaging>jar</packaging>
-	<name>Spring Boot Docker - Api Gateway</name>
-	<description>Getting started with Spring Boot and Docker - Api Gateway</description>
+	<name>Spring Boot Docker - Awesome Phrases Microservie</name>
+	<description>Getting started with Spring Boot and Docker - Awesome
+		Phrases Microservie</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -85,8 +86,8 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
