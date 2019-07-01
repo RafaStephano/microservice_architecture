@@ -10,6 +10,7 @@ services:
     image: br.com.rstephano/awesome-phrases:latest
     environment:
       EUREKA_URI: http://service-discovery:8761/eureka
+      # EUREKA_INSTANCE_IPADDRESS: 127.0.0.1
     depends_on:
       - service-discovery
   awesome-phrases-2:
@@ -17,6 +18,7 @@ services:
     image: br.com.rstephano/awesome-phrases:latest
     environment:
       EUREKA_URI: http://service-discovery:8761/eureka
+      # EUREKA_INSTANCE_IPADDRESS: 127.0.0.1
     depends_on:
       - service-discovery
   api-gateway:
@@ -24,6 +26,7 @@ services:
     image: br.com.rstephano/api-gateway:latest
     environment:
       EUREKA_URI: http://service-discovery:8761/eureka
+      # EUREKA_INSTANCE_IPADDRESS: 127.0.0.1
     ports:
       - "8080:8080"
     depends_on:

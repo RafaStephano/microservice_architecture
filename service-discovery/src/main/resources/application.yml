@@ -5,3 +5,5 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+  instance:
+    preferIpAddress: true
